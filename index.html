@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - Syukran Soleh</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                <h3>Assessment Syukran S. (22 NOV 2024)</h3>
+            </div>
+            <div class="card-header">
+                <h3>Select Data to Fetch</h3>
+            </div>
+            <div class="card-body">
+                <form id="apiForm">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" value="posts"> Posts
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" value="comments"> Comments
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" value="todos"> Todos
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" value="users"> Users
+                            </label>
+                        </div>
+                        <div class="warning" id="warning">Please select at least one option.</div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit">Submit</button>
+                        <button type="button" id="clearBtn">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="dataContainer" class="data-container"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 SyukranDev</p>
+            <div class="footer-links">
+                <a href="https://syukrandev.vercel.app/">Portfolio</a>
+                <a href="https://github.com/syukranDev">Github</a>
+                <!-- <a href="#">Linkedin</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/formSubmission.js"></script>
+    <script src="/js/bg_particles.js"></script>
+</body>
+</html>
