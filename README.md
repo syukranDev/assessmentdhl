@@ -18,7 +18,7 @@ https://jsonplaceholder.typicode.com/users <br>
    
 
 ## Source API Data Relation
-TBA
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/c4ee638d-92c4-4541-b35a-bf5144c0a163">
 
 ## Screenshots
 <img width="933" alt="image" src="https://github.com/user-attachments/assets/237fc0ab-3578-4cef-864d-8a4d9f6d6d65">
