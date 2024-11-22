@@ -86,7 +86,7 @@ console.log(data)
                         commentsHTML += `
                             <li class="data-item">
                                 <p><span style="text-decoration: underline">Body</span>: ${comment.body}</p>
-                                <div class="author">Author: ${comment.name || 'NA'}</div>
+                                <div class="author">Name: ${comment.name || 'NA'}</div>
                                 <div class="author">Emaiil: ${comment.email || 'NA'}</div>
                             </li>
                         `;
@@ -117,7 +117,7 @@ console.log(data)
                     commentsHTML += `
                         <li class="data-item">
                             <p><span style="text-decoration: underline">Body</span>: ${comment.body}</p>
-                            <div class="author">Author: ${comment.name || 'NA'}</div>
+                            <div class="author">Name: ${comment.name || 'NA'}</div>
                             <div class="author">Emaiil: ${comment.email || 'NA'}</div>
                         </li>
                     `;
