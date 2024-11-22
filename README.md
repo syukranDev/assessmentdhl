@@ -22,6 +22,7 @@ https://jsonplaceholder.typicode.com/users <br>
 
 
 ## Screenshots
-<img width="933" alt="image" src="https://github.com/user-attachments/assets/237fc0ab-3578-4cef-864d-8a4d9f6d6d65">
-<img width="928" alt="image" src="https://github.com/user-attachments/assets/9486ea7b-c960-449a-9344-f44b28f5b841">
+<img width="1199" alt="image" src="https://github.com/user-attachments/assets/54f87153-1c2d-4529-91c5-e8f022b01c6a">
+<img width="1203" alt="image" src="https://github.com/user-attachments/assets/44ce4c42-5a4c-4886-80d4-7655fbe4afe7">
+
 
