@@ -241,7 +241,7 @@ button[type="button"]:hover {
     font-size: 0.8rem;
     color: #888;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2px;
 }
 
 .spinner {
