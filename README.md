@@ -20,11 +20,6 @@ https://jsonplaceholder.typicode.com/users <br>
 ## Database Structure of source API
 TBA
 
-## Features
-- User input validation - select valid options (single or multiple valid combination)
-<img width="352" alt="image" src="https://github.com/user-attachments/assets/fb6f0d92-a126-451a-855a-6d1ae68284b4">
-
-
 ## Screenshots
 <img width="933" alt="image" src="https://github.com/user-attachments/assets/237fc0ab-3578-4cef-864d-8a4d9f6d6d65">
 <img width="928" alt="image" src="https://github.com/user-attachments/assets/9486ea7b-c960-449a-9344-f44b28f5b841">
