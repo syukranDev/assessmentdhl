@@ -155,6 +155,7 @@ button[type="button"]:hover {
 
 .data-container {
     margin-top: 2rem;
+    margin-bottom: 6rem;
 }
 
 .data-card {
@@ -165,6 +166,16 @@ button[type="button"]:hover {
     overflow: hidden;
     border: 1px solid #333;
     width: 800px;
+}
+
+.data-card-comments {
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid #333;
+    width: 100%;
 }
 
 .data-card-header {
@@ -230,6 +241,7 @@ button[type="button"]:hover {
     font-size: 0.8rem;
     color: #888;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .spinner {
