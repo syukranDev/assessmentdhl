@@ -42,6 +42,7 @@ console.log(data)
     if (type == 'combine_posts_comments') headerCardName = 'posts, comments'
     if (type == 'combine_posts_comments_users') headerCardName = 'posts, comments, users'
     if (type == 'combine_todos_users') headerCardName = 'todos, users'
+    if (type == 'combine_posts_todos_users') headerCardName = 'posts, todos, users'
 
     header.innerHTML = `<h4>Result: ${headerCardName}</h4>`;
 
@@ -139,6 +140,18 @@ console.log(data)
             }
                 break;
             case 'combine_todos_users':
+            listItem.className += item.completed ? ' completed' : '';
+            listItem.innerHTML = `
+                <h5><span style="text-decoration: underline">Title</span>: ${item.title}</h5>
+                <span class="badge ${item.completed ? 'badge-success' : 'badge-warning'}">
+                    ${item.completed ? 'Completed' : 'Pending'}
+                </span>
+                <div class="author">Author: ${item.users}</div>
+            `;
+
+                
+                break;
+            case 'combine_posts_todos_users':
             listItem.className += item.completed ? ' completed' : '';
             listItem.innerHTML = `
                 <h5><span style="text-decoration: underline">Title</span>: ${item.title}</h5>
@@ -275,6 +288,32 @@ async function handleSubmit(event) {
                 dataContainer.innerHTML = '<p style="color:white; text-align:center">Scroll down to bottom to see any SEPERATE list (if any)</p>';
                 dataContainer.appendChild(createDataCard(combinedData, 'combine_todos_users', selectedEndpoints));
                 }, 800); 
+        } else if (selectedEndpoints.includes('todos') & selectedEndpoints.includes('users') && selectedEndpoints.includes('posts') && !selectedEndpoints.includes('comments')) {
+            const [posts,todos, users] = await Promise.all([
+                fetchData('posts'),
+                fetchData('todos'),
+                fetchData('users')
+            ]);
+
+            setTimeout(() => {
+                const combinedData_posts_users = posts.map(post => {
+                    const user = users.find(user => user.id === post.userId);
+                    return { ...post, name: user ? user.name : 'Unknown User' };
+                });
+
+                const combinedData_todos_users = todos.map(todo => {
+                    const postUsers = users.filter(user => user.id === todo.userId);
+                    return { 
+                        ...todo, 
+                        users: postUsers[0].name
+                    };
+                });
+    
+                dataContainer.innerHTML = '';
+                dataContainer.innerHTML = '<p style="color:white; text-align:center">Scroll down to bottom to see any SEPERATE list (if any)</p>';
+                dataContainer.appendChild(createDataCard(combinedData_posts_users, 'combine_posts_users'));
+                dataContainer.appendChild(createDataCard(combinedData_todos_users, 'combine_todos_users', selectedEndpoints));
+            }, 800); 
         } else if (selectedEndpoints.includes('comments') & selectedEndpoints.includes('todos') && selectedEndpoints.includes('users') && !selectedEndpoints.includes('posts')) {
             const [comments, todos, users] = await Promise.all([
                 fetchData('comments'),
@@ -359,6 +398,7 @@ async function handleSubmit(event) {
             );
             
             dataContainer.innerHTML = '';
+            dataContainer.innerHTML = '<p style="color:white; text-align:center">Scroll down to bottom to see any SEPERATE list (if any)</p>';
             results.forEach(card => dataContainer.appendChild(card));
         }
     } catch (error) {
