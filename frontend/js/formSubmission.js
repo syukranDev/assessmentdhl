@@ -3,8 +3,8 @@ const warning = document.getElementById('warning');
 const clearBtn = document.getElementById('clearBtn');
 const dataContainer = document.getElementById('dataContainer');
 const baseUrl = 'https://jsonplaceholder.typicode.com';
-
-
+let teet = 0
+var test;
 async function fetchData(endpoint) {
     console.log(`${baseUrl}/${endpoint}`)
 
@@ -53,6 +53,13 @@ console.log(data)
         listItem.className = 'data-item';
         
         switch(type) {
+            case 'combine_posts_users':
+                listItem.innerHTML = `
+                    <h5><span style="text-decoration: underline">Title</span>: ${item.title}</h5>
+                    <p><span style="text-decoration: underline">Body</span>: ${item.body}</p>
+                    <div class="author">Author: ${item.name}</div>
+                `;
+                break;
             case 'comments':
                 listItem.innerHTML = `
                     <h5><span style="text-decoration: underline">Name</span>: ${item.name}</h5>
@@ -370,10 +377,10 @@ function handleClear() {
     warning.style.display = 'none';
 }
 
-//NOTE DEV: Checkbox user input validation
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
 // Disable since not meet criteria
+//NOTE DEV: Checkbox user input validation
+// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
 // function validateSelections() {
 //     const selectedValues = Array.from(checkboxes)
 //         .filter(cb => cb.checked)
