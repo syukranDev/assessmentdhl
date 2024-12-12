@@ -2,12 +2,7 @@
 
 Assessment: 3rd party data fetch and filtering using raw programming without framework, UI is optional.
 
-Live can be seen here if you wish to skip the hassle setup below: [https://assessmentdhl.onrender.com/](https://assessmentdhl.onrender.com/)<br>
-
-Let me know if:
--you're unable to access it; this might be due to long inactivity causing the service provider to turn it off
--there's bug, I will do the fix real quick.
- 
+Live: [https://assessmentdhl.onrender.com/](https://assessmentdhl.onrender.com/)<br>
 
 ## Tech Stack: 
 Static Website: : HTML5, CSS, ES6 Javascript, Google Font<br>
