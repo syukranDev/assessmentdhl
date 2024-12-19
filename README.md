@@ -1,6 +1,6 @@
 # assessmentdhl
 
-Assessment: 3rd party data fetch and filtering using raw programming without framework, UI is optional.
+Assessment: 3rd party data fetch and filtering using raw programming without framework (for fun lol), UI is optional.
 
 Live: [https://assessmentdhl.onrender.com/](https://assessmentdhl.onrender.com/)<br>
 
